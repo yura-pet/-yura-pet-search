@@ -624,9 +624,10 @@ h3, p, li, .item, .note, .qa, .q, .a, .emph, .emph-block, .price, .pill {
         <h2>預約資訊</h2>
         <form class="form-grid" id="searchBooking" onsubmit="return false;">
           <div class="form-field">
-            <label for="s_name">寵物寶貝名稱</label>
+            <label for="s_name">毛孩名稱</label>
             <input id="s_name" type="text" placeholder="請填毛孩名字">
           </div>
+
           <div class="form-field">
             <label for="s_service">服務類型</label>
             <select id="s_service">
@@ -636,32 +637,53 @@ h3, p, li, .item, .note, .qa, .q, .a, .emph, .emph-block, .price, .pill {
               <option>奇門遁甲測算</option>
             </select>
           </div>
+
+          <div class="form-field">
+            <label for="s_method">溝通方式</label>
+            <select id="s_method">
+              <option value="">請選擇</option>
+              <option>照片＋視訊</option>
+              <option>照片＋文字</option>
+              <option>語音＋照片</option>
+            </select>
+          </div>
+
           <div class="form-field">
             <label for="s_missing_time">失蹤時間</label>
             <input id="s_missing_time" type="text" placeholder="請填走失日期與時間">
           </div>
+
           <div class="form-field">
             <label for="s_last_place">最後出現地點</label>
             <input id="s_last_place" type="text" placeholder="請盡量寫清楚地點">
           </div>
-          <div class="form-field">
-            <label for="s_distance">走失地點與住處距離</label>
-            <input id="s_distance" type="text" placeholder="例如：約 500 公尺">
-          </div>
-          <div class="form-field">
-            <label for="s_city">目前所在城市</label>
-            <input id="s_city" type="text" placeholder="例如：新北市">
-          </div>
+
           <div class="form-field">
             <label for="s_story">走失經過／當時環境</label>
             <textarea id="s_story" placeholder="怎麼走丟的、當時環境、目前已做過哪些搜尋，都可以寫清楚"></textarea>
           </div>
+
           <div class="form-field">
-            <label for="s_time">可配合預約時段</label>
-            <textarea id="s_time" placeholder="可以填 1～2 個方便的日期與時段"></textarea>
+            <label for="s_questions">想詢問的內容</label>
+            <textarea id="s_questions" placeholder="可以先把想詢問毛孩的內容整理在這裡"></textarea>
           </div>
+
+          <div class="form-field">
+            <label for="s_time1">可配合時段 ①</label>
+            <input id="s_time1" type="text" placeholder="例如：8/18 14:00～17:00">
+          </div>
+
+          <div class="form-field">
+            <label for="s_time2">可配合時段 ②</label>
+            <input id="s_time2" type="text" placeholder="例如：8/20 19:00 之後">
+          </div>
+
           <div class="form-help">毛孩正面清晰照等照片資料，請回到 LINE 後一併傳送。</div>
-          <button class="copy-button" type="button" onclick="yuraCopy('searchBooking','searchCopyStatus','【找寵服務｜預約資料】', [['s_name','寵物寶貝名稱'],['s_service','服務類型'],['s_missing_time','失蹤時間'],['s_last_place','最後出現地點'],['s_distance','走失地點與住處距離'],['s_city','目前所在城市'],['s_story','走失經過／當時環境'],['s_time','可配合預約時段']])">複製預約資料</button>
+
+          <button class="copy-button" type="button"
+            onclick="yuraCopy('searchBooking','searchCopyStatus','【找寵服務｜預約資料】', [['s_name','毛孩名稱'],['s_service','服務類型'],['s_method','溝通方式'],['s_missing_time','失蹤時間'],['s_last_place','最後出現地點'],['s_story','走失經過／當時環境'],['s_questions','想詢問的內容'],['s_time1','可配合時段①'],['s_time2','可配合時段②']])">
+            複製預約資料
+          </button>
           <div class="copy-status" id="searchCopyStatus" aria-live="polite"></div>
         </form>
         <div class="note">看完之後，回到 LINE 跟我說一聲。我會把最近還剩下的時間給你挑，時間確定了，再談匯款。若不確定是否適合預約，歡迎先詢問。</div>
