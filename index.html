@@ -372,6 +372,80 @@ h3, p, li, .item, .note, .qa, .q, .a, .emph, .emph-block, .price, .pill {
   font-family: "Iansui","PingFang TC","Noto Sans TC",sans-serif !important;
 }
 
+
+/* Fillable reservation form */
+.form-grid{
+  display:grid;
+  gap:15px;
+}
+.form-field{
+  display:grid;
+  gap:7px;
+}
+.form-field label{
+  font-family:var(--body-font);
+  font-weight:700;
+  color:var(--ink-deep);
+  font-size:18px;
+}
+.form-field input,
+.form-field select,
+.form-field textarea{
+  width:100%;
+  border:1px solid rgba(126,149,174,.25);
+  border-radius:14px;
+  background:rgba(255,255,255,.72);
+  color:var(--ink-deep);
+  font-family:var(--body-font);
+  font-size:17px;
+  line-height:1.55;
+  padding:12px 14px;
+  outline:none;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.62);
+  -webkit-appearance:none;
+}
+.form-field textarea{
+  min-height:120px;
+  resize:vertical;
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus{
+  border-color:rgba(215,154,130,.72);
+  box-shadow:0 0 0 3px rgba(215,154,130,.12);
+}
+.form-help{
+  margin-top:2px;
+  font-size:15px;
+  color:#718399;
+}
+.copy-button{
+  width:100%;
+  margin-top:6px;
+  min-height:48px;
+  border:1px solid rgba(215,154,130,.32);
+  border-radius:999px;
+  background:linear-gradient(180deg,rgba(248,233,223,.98),rgba(252,242,235,.98));
+  color:var(--ink-deep);
+  font-family:var(--body-font);
+  font-size:18px;
+  font-weight:700;
+  cursor:pointer;
+  box-shadow:0 8px 20px rgba(120,92,72,.09);
+}
+.copy-button:active{transform:translateY(1px)}
+.copy-status{
+  min-height:1.6em;
+  margin-top:8px;
+  text-align:center;
+  color:#718399;
+  font-size:15px;
+}
+@media(max-width:720px){
+  .form-field label,.copy-button{font-size:17px}
+  .form-field input,.form-field select,.form-field textarea{font-size:16px}
+}
+
 </style>
 </head>
 <body>
@@ -548,14 +622,48 @@ h3, p, li, .item, .note, .qa, .q, .a, .emph, .emph-block, .price, .pill {
 
       <section class="card">
         <h2>預約資訊</h2>
-        <div class="item"><span class="emph">寵物寶貝名稱：</span></div>
-        <div class="item"><span class="emph">服務類型：</span>找寵服務 ／ 生死・轉世確認 ／ 奇門遁甲測算</div>
-        <div class="item"><span class="emph">失蹤時間：</span></div>
-        <div class="item"><span class="emph">最後出現地點：</span></div>
-        <div class="item"><span class="emph">走失地點與住處距離：</span></div>
-        <div class="item"><span class="emph">目前所在城市：</span></div>
-        <div class="item"><span class="emph">走失經過／當時環境：</span></div>
-        <div class="item"><span class="emph">預約時段：</span></div>
+        <form class="form-grid" id="searchBooking" onsubmit="return false;">
+          <div class="form-field">
+            <label for="s_name">寵物寶貝名稱</label>
+            <input id="s_name" type="text" placeholder="請填毛孩名字">
+          </div>
+          <div class="form-field">
+            <label for="s_service">服務類型</label>
+            <select id="s_service">
+              <option value="">請選擇</option>
+              <option>找寵服務</option>
+              <option>生死・轉世確認</option>
+              <option>奇門遁甲測算</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="s_missing_time">失蹤時間</label>
+            <input id="s_missing_time" type="text" placeholder="請填走失日期與時間">
+          </div>
+          <div class="form-field">
+            <label for="s_last_place">最後出現地點</label>
+            <input id="s_last_place" type="text" placeholder="請盡量寫清楚地點">
+          </div>
+          <div class="form-field">
+            <label for="s_distance">走失地點與住處距離</label>
+            <input id="s_distance" type="text" placeholder="例如：約 500 公尺">
+          </div>
+          <div class="form-field">
+            <label for="s_city">目前所在城市</label>
+            <input id="s_city" type="text" placeholder="例如：新北市">
+          </div>
+          <div class="form-field">
+            <label for="s_story">走失經過／當時環境</label>
+            <textarea id="s_story" placeholder="怎麼走丟的、當時環境、目前已做過哪些搜尋，都可以寫清楚"></textarea>
+          </div>
+          <div class="form-field">
+            <label for="s_time">可配合預約時段</label>
+            <textarea id="s_time" placeholder="可以填 1～2 個方便的日期與時段"></textarea>
+          </div>
+          <div class="form-help">毛孩正面清晰照等照片資料，請回到 LINE 後一併傳送。</div>
+          <button class="copy-button" type="button" onclick="yuraCopy('searchBooking','searchCopyStatus','【找寵服務｜預約資料】', [['s_name','寵物寶貝名稱'],['s_service','服務類型'],['s_missing_time','失蹤時間'],['s_last_place','最後出現地點'],['s_distance','走失地點與住處距離'],['s_city','目前所在城市'],['s_story','走失經過／當時環境'],['s_time','可配合預約時段']])">複製預約資料</button>
+          <div class="copy-status" id="searchCopyStatus" aria-live="polite"></div>
+        </form>
         <div class="note">看完之後，回到 LINE 跟我說一聲。我會把最近還剩下的時間給你挑，時間確定了，再談匯款。若不確定是否適合預約，歡迎先詢問。</div>
       </section>
 
@@ -577,5 +685,36 @@ h3, p, li, .item, .note, .qa, .q, .a, .emph, .emph-block, .price, .pill {
 
     <div class="footer">© Yura Pet Communication</div>
   </div>
+
+<script>
+function yuraCollect(formId, title, fields){
+  const form = document.getElementById(formId);
+  const lines = [title, ''];
+  fields.forEach(([id,label]) => {
+    const el = form.querySelector('#'+id);
+    const value = (el && el.value ? el.value.trim() : '') || '（未填）';
+    lines.push(label + '：' + value);
+  });
+  return lines.join('\n');
+}
+async function yuraCopy(formId, statusId, title, fields){
+  const text = yuraCollect(formId, title, fields);
+  const status = document.getElementById(statusId);
+  try{
+    if(navigator.clipboard && window.isSecureContext){
+      await navigator.clipboard.writeText(text);
+    }else{
+      const ta=document.createElement('textarea');
+      ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+      document.body.appendChild(ta); ta.focus(); ta.select();
+      document.execCommand('copy'); document.body.removeChild(ta);
+    }
+    status.textContent='已複製完成 ✨ 回到 LINE 直接貼上給我就可以了。';
+  }catch(e){
+    status.textContent='無法自動複製，請長按欄位內容手動複製後貼到 LINE。';
+  }
+}
+</script>
+
 </body>
 </html>
