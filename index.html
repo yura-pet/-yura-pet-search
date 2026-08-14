@@ -4,184 +4,120 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#f8f1f4">
-<title>Yura｜找寵服務事前說明書</title>
+<title>Yura｜寵物溝通服務總覽</title>
 <style>
-
 @font-face {
-  font-family: "ChenYuluoyan";
-  src: url("./ChenYuluoyan.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
+  font-family:"ChenYuluoyan";
+  src:url("./ChenYuluoyan.woff2") format("woff2");
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
 }
-
 @font-face {
-  font-family: "Iansui";
-  src: url("./Iansui.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
+  font-family:"Iansui";
+  src:url("./Iansui.woff2") format("woff2");
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
 }
-
 :root{
   --ink:#354a62;
   --ink-deep:#314863;
   --text:#4b647d;
+  --muted:#6d7e90;
   --pink:#d79a82;
-  --pink-soft:rgba(248,233,223,.92);
-  --pink-soft-2:rgba(252,242,235,.94);
-  --white-card:rgba(255,250,246,.90);
-  --line:rgba(126,149,174,.20);
+  --pink-strong:#cd876d;
+  --white-card:rgba(255,250,246,.91);
+  --soft:rgba(255,244,238,.86);
+  --line:rgba(126,149,174,.18);
   --shadow:0 16px 38px rgba(120,92,72,.12);
   --title-font:"ChenYuluoyan","PingFang TC","Noto Serif TC",serif;
   --body-font:"Iansui","PingFang TC","Noto Sans TC",sans-serif;
-  --num-font:"Iansui","PingFang TC",sans-serif;
 }
-
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-  font-family: "Iansui","PingFang TC","Noto Sans TC",sans-serif;
   margin:0;
   color:var(--ink);
   font-family:var(--body-font);
-  line-height:1.95;
+  line-height:1.9;
   -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
   background:
-    linear-gradient(rgba(255,244,238,.74), rgba(255,246,240,.74)),
-    url("yura-background.jpg") center top / cover fixed no-repeat;
+    linear-gradient(rgba(255,244,238,.74),rgba(255,246,240,.74)),
+    url("yura-background.jpg") center top/cover fixed no-repeat;
 }
-
 .wrap{
-  font-family:var(--body-font);
-  width:min(880px, calc(100% - 24px));
+  width:min(900px,calc(100% - 24px));
   margin:0 auto;
   padding:18px 0 34px;
 }
-
-.header{
+.hero{
   text-align:center;
-  padding:22px 12px 30px;
-  background:linear-gradient(180deg, rgba(255,239,228,.62), rgba(255,246,240,.22));
+  padding:26px 16px 34px;
   border-radius:28px;
-  backdrop-filter: blur(5px);
+  background:linear-gradient(180deg,rgba(255,239,228,.64),rgba(255,246,240,.24));
+  backdrop-filter:blur(6px);
 }
-
-.brandline{
+.brand{
   display:flex;
-  align-items:flex-end;
   justify-content:center;
-  gap:12px;
+  align-items:flex-end;
   flex-wrap:wrap;
-  margin-bottom:8px;
+  gap:10px;
 }
-
-.brandline-cn{
-  font-family:var(--title-font);
-  font-size:clamp(28px,5vw,44px);
-  font-weight:700;
+.brand-cn,.brand-yura,.hero-title,.section-title{
+  font-family:var(--title-font)!important;
+  font-weight:400;
+  -webkit-text-stroke:.35px currentColor;
+}
+.brand-cn{
+  font-size:clamp(27px,5vw,43px);
   color:var(--ink-deep);
   letter-spacing:.06em;
-  line-height:1;
-  text-shadow:0 1px 0 rgba(255,255,255,.55);
 }
-
-.brandline-yura{
-  font-family:var(--title-font);
-  font-size:clamp(40px,6.3vw,66px);
+.brand-yura{
+  font-size:clamp(40px,6vw,66px);
   color:var(--pink);
-  font-weight:700;
-  line-height:1;
-  letter-spacing:.02em;
-  text-shadow:0 1px 0 rgba(255,255,255,.48);
 }
-
-.title-wrap{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:8px;
-}
-
-.main-title{
-  margin:8px 0 0;
-  font-family:var(--title-font);
-  font-size:clamp(38px,7.2vw,62px);
-  font-weight:700;
+.hero-title{
+  margin:14px 0 2px;
+  font-size:clamp(37px,7vw,62px);
   color:var(--ink-deep);
   letter-spacing:.08em;
   line-height:1.12;
-  text-shadow:0 2px 0 rgba(255,255,255,.42);
 }
-
-.title-divider{
-  width:118px;
+.divider{
+  width:120px;
   height:2px;
-  background:linear-gradient(90deg, transparent, rgba(215,154,130,.85), transparent);
-  margin:2px 0;
+  margin:8px auto 10px;
+  background:linear-gradient(90deg,transparent,rgba(215,154,130,.85),transparent);
 }
-
-.title-sub{
-  font-family:var(--title-font);
-  font-size:clamp(18px,3.2vw,22px);
-  color:#60758e;
-  letter-spacing:.22em;
-  font-weight:700;
+.hero-sub{
+  margin:0 auto;
+  max-width:640px;
+  color:var(--muted);
+  font-size:18px;
 }
-
-.subline{
-  margin:10px auto 0;
-  max-width:560px;
-  color:#6d7e90;
+.hero-copy{
+  margin:14px auto 0;
+  max-width:680px;
+  color:var(--text);
   font-size:17px;
-  line-height:1.9;
-  text-shadow:0 1px 0 rgba(255,255,255,.35);
 }
-
-.price{
-  margin-top:18px;
-  display:inline-flex;
-  align-items:center;
-  gap:12px;
-  padding:10px 18px;
-  border-radius:999px;
-  background:linear-gradient(180deg, var(--pink-soft), var(--pink-soft-2));
-  color:var(--ink-deep);
-  box-shadow:0 8px 22px rgba(104,95,109,.08);
-}
-
-.price span{
-  font-family:var(--body-font);
-  font-size:16px;
-  color:var(--ink-deep);
-  letter-spacing:.02em;
-  font-weight:700;
-}
-
-.price b{
-  font-family:var(--body-font);
-  font-size:21px;
-  color:var(--ink-deep);
-  letter-spacing:.02em;
-  font-weight:700;
-}
-
-.cards{
+.grid{
   display:grid;
   gap:16px;
+  margin-top:16px;
 }
-
 .card{
+  position:relative;
+  padding:3cm;
+  border-radius:26px;
   background:var(--white-card);
-  border:1px solid rgba(255,255,255,.85);
+  border:1px solid rgba(255,255,255,.86);
   box-shadow:var(--shadow);
   backdrop-filter:blur(8px);
-  border-radius:26px;
-  padding:3cm;
-  position:relative;
 }
-
 .card::before{
   content:"";
   position:absolute;
@@ -190,553 +126,220 @@ body{
   border-radius:22px;
   pointer-events:none;
 }
-
-.card h2{
+.card>*{position:relative;z-index:1}
+.section-title{
   margin:0 0 14px;
-  font-size:27px;
+  font-size:clamp(28px,4.8vw,40px);
   color:var(--ink-deep);
-  font-weight:400;
-  font-family:var(--title-font);
   letter-spacing:.06em;
-  position:relative;
-  z-index:1;
+  line-height:1.2;
 }
-
-.card h3{
-  margin:16px 0 6px;
-  font-size:20px;
-  color:var(--ink-deep);
-  font-weight:400;
-  font-family:var(--title-font);
-  letter-spacing:.03em;
-  position:relative;
-  z-index:1;
-}
-
-p, li, .a, .item, .note, .chip, .q{
-  position:relative;
-  z-index:1;
-}
-
-p{
-  margin:8px 0;
-  color:var(--text);
-  font-size:18px;
-}
-
-ul{
-  margin:10px 0;
-  padding-left:1.25em;
-}
-
-li{
-  font-family:var(--body-font);
-  margin:6px 0;
-  color:var(--text);
-  font-size:18px;
-}
-
-.note{
-  font-family:var(--body-font);
-  margin-top:12px;
-  padding:14px 16px;
-  background:linear-gradient(180deg, var(--pink-soft), rgba(250,236,228,.82));
-  border-radius:16px;
-  font-size:17px;
-  color:var(--text);
-}
-
-.item{
-  font-family:var(--body-font);
-  padding:12px 0;
-  border-top:1px dashed var(--line);
-  color:var(--text);
-  font-size:18px;
-}
-
-.item:first-child{border-top:0}
-
-.label{
-  font-weight:700;
-  color:var(--ink-deep);
-  font-family:var(--title-font);
-  letter-spacing:.02em;
-}
-
-.chips{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  margin-top:6px;
-}
-
-.chip{
-  font-family:var(--body-font);
-  display:inline-block;
-  background:linear-gradient(180deg, var(--pink-soft), var(--pink-soft-2));
-  border-radius:999px;
-  padding:7px 12px;
-  font-size:15px;
-  color:var(--ink-deep);
-  font-family:var(--num-font);
-  letter-spacing:.03em;
-}
-
-.qa{
-  padding:12px 0;
-  border-top:1px solid var(--line);
-}
-
-.qa:first-child{border-top:0}
-
-.q{
-  font-family:var(--title-font);
-  font-weight:900;
-  color:var(--ink-deep);
+.service-kicker{
+  font-size:16px;
+  color:#8a6e65;
   margin-bottom:5px;
-  font-size:18px;
-  letter-spacing:.02em;
 }
-
-.a{
-  font-family:var(--body-font);
+.price{
+  display:inline-block;
+  margin:8px 0 12px;
+  padding:7px 13px;
+  border-radius:999px;
+  background:rgba(248,233,223,.95);
+  color:var(--ink-deep);
+  font-weight:700;
+}
+p,li{
   color:var(--text);
   font-size:18px;
 }
-
+ul{margin:8px 0 0 1.1em;padding:0}
+.note{
+  margin-top:12px;
+  padding:15px 17px;
+  border-radius:18px;
+  background:rgba(255,245,239,.88);
+  border:1px solid rgba(215,154,130,.22);
+  color:#60728a;
+  font-size:17px;
+}
+.service-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:16px;
+  min-height:44px;
+  padding:10px 16px;
+  border-radius:999px;
+  text-decoration:none;
+  background:rgba(255,240,231,.96);
+  border:1px solid rgba(215,154,130,.26);
+  color:var(--ink-deep);
+  font-weight:700;
+  box-shadow:0 6px 16px rgba(120,92,72,.08);
+}
+.service-link:active{transform:translateY(1px)}
+.path{
+  display:grid;
+  gap:10px;
+}
+.path-row{
+  padding:12px 0;
+  border-top:1px dashed rgba(126,149,174,.2);
+}
+.path-row:first-child{border-top:0}
+.path-row b{color:var(--ink-deep)}
+.steps{
+  display:grid;
+  gap:12px;
+  counter-reset:step;
+}
+.step{
+  display:grid;
+  grid-template-columns:34px 1fr;
+  gap:12px;
+  align-items:start;
+}
+.step::before{
+  counter-increment:step;
+  content:counter(step);
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:rgba(248,233,223,.96);
+  color:var(--ink-deep);
+  font-weight:700;
+}
 .footer{
   text-align:center;
-  color:#7e8592;
-  font-size:12px;
-  padding-top:18px;
-  font-family:var(--num-font);
-  letter-spacing:.06em;
-}
-
-@media (max-width:960px){
-  .card{padding:2.2cm;}
-}
-
-@media (max-width:720px){
-  .wrap{width:min(100% - 18px, 880px)}
-  .header{padding:10px 6px 20px}
-  .card{padding:1.35cm; border-radius:20px}
-  .card::before{inset:8px; border-radius:16px;}
-  .card h2{font-size:27px}
-  .card h3{font-size:18px}
-  p, li, .a, .item{font-size:15px}
-  .main-title{font-size:30px}
-  .title-sub{letter-spacing:.16em}
-  .price span{font-size:16px}
-  .price b{font-size:22px}
-}
-
-.price-text{
-  font-family:var(--body-font) !important;
-  font-weight:700;
-  letter-spacing:.02em;
-}
-
-
-.emph{
-  font-family:var(--body-font) !important;
-  font-weight:800 !important;
-  font-size:1.12em;
-  color:var(--ink-deep);
-  letter-spacing:.01em;
-}
-.emph-block{
-  font-family:var(--body-font) !important;
-  font-weight:800 !important;
-  font-size:1.12em;
-  color:var(--ink-deep);
-  letter-spacing:.01em;
-  display:inline-block;
-}
-.important-list{
-  margin:8px 0 0;
-  padding-left:1.2em;
-}
-.important-list li{
-  margin:10px 0;
-}
-
-
-/* Font hardening for Safari / GitHub Pages */
-h1, h2, .hero-title, .section-title {
-  font-family: "ChenYuluoyan","PingFang TC","Noto Serif TC",serif !important;
-  font-weight: 400 !important;
-  -webkit-text-stroke: 0.35px currentColor;
-}
-h3, p, li, .item, .note, .qa, .q, .a, .emph, .emph-block, .price, .pill {
-  font-family: "Iansui","PingFang TC","Noto Sans TC",sans-serif !important;
-}
-
-
-/* Fillable reservation form */
-.form-grid{
-  display:grid;
-  gap:15px;
-}
-.form-field{
-  display:grid;
-  gap:7px;
-}
-.form-field label{
-  font-family:var(--body-font);
-  font-weight:700;
-  color:var(--ink-deep);
-  font-size:18px;
-}
-.form-field input,
-.form-field select,
-.form-field textarea{
-  width:100%;
-  border:1px solid rgba(126,149,174,.25);
-  border-radius:14px;
-  background:rgba(255,255,255,.72);
-  color:var(--ink-deep);
-  font-family:var(--body-font);
-  font-size:17px;
-  line-height:1.55;
-  padding:12px 14px;
-  outline:none;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.62);
-  -webkit-appearance:none;
-}
-.form-field textarea{
-  min-height:120px;
-  resize:vertical;
-}
-.form-field input:focus,
-.form-field select:focus,
-.form-field textarea:focus{
-  border-color:rgba(215,154,130,.72);
-  box-shadow:0 0 0 3px rgba(215,154,130,.12);
-}
-.form-help{
-  margin-top:2px;
-  font-size:15px;
+  padding:20px 0 8px;
   color:#718399;
+  font-size:14px;
+  letter-spacing:.04em;
 }
-.copy-button{
-  width:100%;
-  margin-top:6px;
-  min-height:48px;
-  border:1px solid rgba(215,154,130,.32);
-  border-radius:999px;
-  background:linear-gradient(180deg,rgba(248,233,223,.98),rgba(252,242,235,.98));
-  color:var(--ink-deep);
-  font-family:var(--body-font);
-  font-size:18px;
-  font-weight:700;
-  cursor:pointer;
-  box-shadow:0 8px 20px rgba(120,92,72,.09);
-}
-.copy-button:active{transform:translateY(1px)}
-.copy-status{
-  min-height:1.6em;
-  margin-top:8px;
-  text-align:center;
-  color:#718399;
-  font-size:15px;
+@media(max-width:960px){
+  .card{padding:2.2cm}
 }
 @media(max-width:720px){
-  .form-field label,.copy-button{font-size:17px}
-  .form-field input,.form-field select,.form-field textarea{font-size:16px}
+  .wrap{width:min(100% - 18px,900px)}
+  .hero{padding:18px 10px 24px;border-radius:22px}
+  .card{padding:1.35cm;border-radius:20px}
+  .card::before{inset:8px;border-radius:16px}
+  p,li{font-size:17px}
 }
-
 </style>
 </head>
 <body>
-  <div class="wrap">
-    <header class="header">
-      <div class="brandline">
-        <div class="brandline-cn">寵物溝通師</div>
-        <div class="brandline-yura">Yura</div>
-      </div>
-      <div class="title-wrap">
-        <div class="main-title">找寵服務</div>
-        <div class="title-divider"></div>
-        <div class="title-sub">事 前 說 明 書</div>
-      </div>
-      <p class="subline">給正在尋找毛孩的你<br>在預約前先閱讀以下內容。</p>
-      <div class="price"><span>20 分鐘</span><b>NT$2,680</b></div>
-    </header>
+<main class="wrap">
 
-    
-    <main class="cards">
-
-      <section class="card">
-        <h2>關於找寵服務</h2>
-        <p><span class="emph-block">找寵服務｜NT$2,680（20 分鐘）</span></p>
-        <p>此服務<span class="emph">不保證尋回</span>，僅提供當下接收到的資訊與線索。</p>
-        <div class="note">寵物是會移動的，我能做的是盡量把當下看到、感受到的資訊整理給你，協助你增加搜尋方向與尋獲機率。</div>
-      </section>
-
-      <section class="card">
-        <h2>這個服務能提供什麼</h2>
-        <p>在找寵溝通中，我會盡量感受與整理：</p>
-        <ul>
-          <li>當下周圍附近可能有些什麼</li>
-          <li>毛孩目前的身體狀態</li>
-          <li>毛孩目前的心理狀態</li>
-          <li>為什麼會跑走／離開</li>
-          <li>牠當下可能想表達的內容</li>
-        </ul>
-        <div class="note">這項服務不會以控制毛孩為目的！每隻毛孩個性想法都不同，不要妄想牠會聽話。我還有遇過說謊的，我們能做的就是與牠協調，但結果我不能保證！</div>
-      </section>
-
-      <section class="card">
-        <h2>先講清楚</h2>
-        <p><span class="emph-block">不保證跟牠說「乖乖待在原地」就真的會待在原地。</span></p>
-        <p>我可以協助傳達，但毛孩仍然有自己的行動與選擇，找寵服務不能把溝通內容視為定位器。</p>
-        <p><span class="emph-block">時間一到即結案！！！</span></p>
-        <p>若後續仍需要再次溝通，可另外預約：</p>
-        <div class="note"><span class="emph">後續溝通｜NT$1,680（一次）</span></div>
-        <p><span class="emph">需搭配實際行動與配合，以達最高尋獲機率！</span></p>
-      </section>
-
-      
-      <section class="card">
-        <h2>測算服務</h2>
-
-        <div class="item">
-          <span class="emph">生死／轉世確認｜NT$366</span>
-
-          <h3><span class="emph">這一項處理：</span></h3>
-          <p>① 毛孩走丟很久或送養後不在身邊，不確定還在不在。</p>
-          <p>② 現在養的這一隻，是不是以前那一隻回來了。</p>
-
-          <h3><span class="emph">需要提供：</span></h3>
-          <p>動物的名字、正面清晰照、品種年齡，還有主人的資料。</p>
-          <p>要確認是不是轉世的話，兩隻的名字跟照片都要提供。</p>
-
-          <h3><span class="emph">為什麼要走這一項：</span></h3>
-          <p>我們的能力可以 99.9% 確認一隻動物的生死，但不能從自己的嘴巴講出牠的生與死，那是為了避免跟因果沾染。</p>
-          <p>所以需要透過打聖杯來確認。</p>
-        </div>
-
-        <div class="item">
-          <span class="emph">奇門遁甲測算｜NT$4,000</span>
-
-          <h3><span class="emph">這一項處理什麼：</span></h3>
-          <p>毛孩走失了，這一項給的是找牠的線索！最後尋獲成功的關鍵方位與物件擺設條件等等…<br><br>此方案包含教你怎麼使用這份報告。我知道你們很急、很需要立馬知道牠好不好，這項服務能夠讓你知道牠好不好、想不想回家？為什麼要跑出去？</p>
-
-          <p>這項服務是<span class="emph">「一次占卦 ＋ 20分鐘溝通」</span>的價。</p>
-          <p>奇門遁甲的卦可能顯示毛孩周圍環境、方位與搜尋方向，也顯示得出生死占卦。</p>
-          <p>照著卦象提供的方位與線索進行搜尋，可以增加找到的機率；也可能依實際狀況調整一些家中擺設，增加找回機率。</p>
-
-          <h3><span class="emph">測算需要：</span></h3>
-          <ul>
-            <li>動物的名字</li>
-            <li>正面清晰照</li>
-            <li>走失的日期、時間</li>
-            <li>當時的環境，以及是怎麼走丟的</li>
-            <li>走失地點跟住處的距離</li>
-            <li>目前在哪個城市</li>
-          </ul>
-          <p><span class="emph">細節寫越清楚，卦出來的線索越有用。</span></p>
-        </div>
-
-        <div class="note">
-          🪞 測算將依照道長的安排進行需耐心等候！實際完成時間無法固定，敬請見諒與理解✨
-          <br><br>
-          <span class="emph">這個線索在找到動物以前都可以用，不是過期就沒用的東西。</span>
-        </div>
-
-        <div class="note">
-          🪞 看不懂、需要解釋，可以跟我說呦！
-        </div>
-      </section>
-
-
-      <section class="card">
-        <h2>服務資訊</h2>
-        <div class="item"><span class="emph">找寵服務：</span>20 分鐘｜NT$2,680</div>
-        <div class="item"><span class="emph">後續溝通：</span>NT$1,680（一次）</div>
-        <div class="item"><span class="emph">生死／轉世確認：</span>NT$366</div>
-        <div class="item"><span class="emph">奇門遁甲：</span>NT$4,000（一次占卦＋20分鐘溝通）</div>
-      </section>
-
-      <section class="card">
-        <h2>預約前請準備</h2>
-        <h3><span class="emph">毛孩照片</span></h3>
-        <p>請提供清楚、近期、能辨識毛孩樣貌的照片。</p>
-
-        <h3><span class="emph">毛孩基本資料</span></h3>
-        <p>包含名字、性別、年齡，以及你目前知道的失蹤時間與相關資訊。</p>
-
-        <h3><span class="emph">最後出現的資訊</span></h3>
-        <p>包含最後看到的地點、時間、當時情況，以及目前已經搜尋過的範圍。</p>
-
-        <h3><span class="emph">實際配合搜尋</span></h3>
-        <p>找寵溝通只能提供線索與方向，仍需要家長實際外出尋找、張貼協尋、詢問附近住戶／店家、調閱監視器等方式共同進行。</p>
-      </section>
-
-      <section class="card">
-        <h2>找寵服務的重要觀念</h2>
-        <h3><span class="emph">一、資訊是動態的</span></h3>
-        <p>毛孩會移動，因此溝通當下看到的環境、方向與狀態，都可能隨時間改變。</p>
-
-        <h3><span class="emph">二、不等於精準定位</span></h3>
-        <p>我會盡量描述當下接收到的周圍環境、身心狀態與可能線索，但不能把這些資訊當成 GPS 精準定位。</p>
-
-        <h3><span class="emph">三、需要實際行動</span></h3>
-        <p>溝通與測算只能作為輔助，真正提高尋獲機率仍需要家長配合實際搜尋與現場行動。</p>
-      </section>
-
-      <section class="card">
-        <h2>常見問題</h2>
-
-        <div class="qa">
-          <div class="q">可以保證找到嗎？</div>
-          <div class="a">不保證尋回。服務提供的是當下接收到的資訊、環境線索、身體與心理狀態，以及可能的搜尋方向。</div>
-        </div>
-
-        <div class="qa">
-          <div class="q">可以叫牠待在原地嗎？</div>
-          <div class="a">可以協助傳達，但不保證毛孩一定會照做。牠仍有自己的行動與選擇。</div>
-        </div>
-
-        <div class="qa">
-          <div class="q">找寵溝通完之後還可以再問嗎？</div>
-          <div class="a">時間一到當下回覆完即結案。後續如需再次連結，費用為 NT$1,680／次。</div>
-        </div>
-
-        <div class="qa">
-          <div class="q">什麼情況適合做生死／轉世確認？</div>
-          <div class="a"><span class="emph">生死：</span>適合用在毛孩失聯很久，找寵前最好都做生死占卦，因為每個人對於生死後的行動想法都不一樣。<br><br><span class="emph">轉世確認：</span>適合用在毛孩失聯很久、送養後不在身邊，或想確認現在這一隻是不是以前那一隻回來的情況。</div>
-        </div>
-
-        <div class="qa">
-          <div class="q">奇門遁甲主要是做什麼？</div>
-          <div class="a">主要是提供確切的報告，幫助主人實際去找！<br>包含最後尋獲成功的關鍵方位與物件擺設條件等等…</div>
-        </div>
-
-        <div class="qa">
-          <div class="q">測算多久會完成？</div>
-          <div class="a">需配合道長的安排，實際完成時間無法固定，請耐心等候。</div>
-        </div>
-      </section>
-
-      <section class="card">
-        <h2>預約資訊</h2>
-        <form class="form-grid" id="searchBooking" onsubmit="return false;">
-          <div class="form-field">
-            <label for="s_name">毛孩名稱</label>
-            <input id="s_name" type="text" placeholder="請填毛孩名字">
-          </div>
-
-          <div class="form-field">
-            <label for="s_service">服務類型</label>
-            <select id="s_service">
-              <option value="">請選擇</option>
-              <option>找寵服務</option>
-              <option>生死・轉世確認</option>
-              <option>奇門遁甲測算</option>
-            </select>
-          </div>
-
-          <div class="form-field">
-            <label for="s_method">溝通方式</label>
-            <select id="s_method">
-              <option value="">請選擇</option>
-              <option>照片＋視訊</option>
-              <option>照片＋文字</option>
-              <option>語音＋照片</option>
-            </select>
-          </div>
-
-          <div class="form-field">
-            <label for="s_missing_time">失蹤時間</label>
-            <input id="s_missing_time" type="text" placeholder="請填走失日期與時間">
-          </div>
-
-          <div class="form-field">
-            <label for="s_last_place">最後出現地點</label>
-            <input id="s_last_place" type="text" placeholder="請盡量寫清楚地點">
-          </div>
-
-          <div class="form-field">
-            <label for="s_story">走失經過／當時環境</label>
-            <textarea id="s_story" placeholder="怎麼走丟的、當時環境、目前已做過哪些搜尋，都可以寫清楚"></textarea>
-          </div>
-
-          <div class="form-field">
-            <label for="s_questions">想詢問的內容</label>
-            <textarea id="s_questions" placeholder="可以先把想詢問毛孩的內容整理在這裡"></textarea>
-          </div>
-
-          <div class="form-field">
-            <label for="s_time1">可配合時段 ①</label>
-            <input id="s_time1" type="text" placeholder="例如：8/18 14:00～17:00">
-          </div>
-
-          <div class="form-field">
-            <label for="s_time2">可配合時段 ②</label>
-            <input id="s_time2" type="text" placeholder="例如：8/20 19:00 之後">
-          </div>
-
-          <div class="form-help">毛孩正面清晰照等照片資料，請回到 LINE 後一併傳送。</div>
-
-          <button class="copy-button" type="button"
-            onclick="yuraCopy('searchBooking','searchCopyStatus','【找寵服務｜預約資料】', [['s_name','毛孩名稱'],['s_service','服務類型'],['s_method','溝通方式'],['s_missing_time','失蹤時間'],['s_last_place','最後出現地點'],['s_story','走失經過／當時環境'],['s_questions','想詢問的內容'],['s_time1','可配合時段①'],['s_time2','可配合時段②']])">
-            複製預約資料
-          </button>
-          <div class="copy-status" id="searchCopyStatus" aria-live="polite"></div>
-        </form>
-        <div class="note">看完之後，回到 LINE 跟我說一聲。我會把最近還剩下的時間給你挑，時間確定了，再談匯款。若不確定是否適合預約，歡迎先詢問。</div>
-      </section>
-
-<section class="card">
-        <h2>預約前重要說明</h2>
-        <ol class="important-list">
-          <li>預約時間確認後，需先完成「全額付款」，付款完成後，才視為預約成功✨<br>⚠️ 所有的溝通與測算，皆需完成付款後，才會進行溝通或測算。</li>
-          <li>預約完成後「若當天取消或未出席」一律不提供退款與兌換！</li>
-          <li>必須是主要照顧者，不是的話因為會有隱私問題，一律不接。</li>
-          <li>預約完成後，若發生不可控之原因，導致沒有連結溝通，一律退全額費用！</li>
-          <li>「找寵」服務中配合的（占生死卦象）與（奇門遁甲）等服務，需要配合道長的時間處理，會等比較久。請確認清楚再進行此服務！一但進行此服務了，就不能反悔，不會退款哦！</li>
-          <li>「離世」溝通中有選擇做（超度）或（炁絡筆裁示／動物兵馬打聖杯確認轉世）等服務，需要配合道長的時間處理，會等比較久。請確認清楚再進行此服務！一但進行此服務了，就不能反悔，不會退款哦！</li>
-        </ol>
-      </section>
-    </main>
-
-
-      
-
-    <div class="footer">© Yura Pet Communication</div>
+<section class="hero">
+  <div class="brand">
+    <div class="brand-cn">寵物溝通師</div>
+    <div class="brand-yura">Yura</div>
   </div>
+  <h1 class="hero-title">服務總覽</h1>
+  <div class="divider"></div>
+  <p class="hero-sub">動物溝通 × 離世陪伴 × 找寵協尋</p>
+  <p class="hero-copy">
+    
+    不論是在世、離世，或正在等待回家的毛孩，
+    你都可以先依照目前的需求，選擇最適合的服務內容。
+  </p>
+</section>
 
-<script>
-function yuraCollect(formId, title, fields){
-  const form = document.getElementById(formId);
-  const lines = [title, ''];
-  fields.forEach(([id,label]) => {
-    const el = form.querySelector('#'+id);
-    const value = (el && el.value ? el.value.trim() : '') || '（未填）';
-    lines.push(label + '：' + value);
-  });
-  return lines.join('\n');
-}
-async function yuraCopy(formId, statusId, title, fields){
-  const text = yuraCollect(formId, title, fields);
-  const status = document.getElementById(statusId);
-  try{
-    if(navigator.clipboard && window.isSecureContext){
-      await navigator.clipboard.writeText(text);
-    }else{
-      const ta=document.createElement('textarea');
-      ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
-      document.body.appendChild(ta); ta.focus(); ta.select();
-      document.execCommand('copy'); document.body.removeChild(ta);
-    }
-    status.textContent='已複製完成 ✨ 回到 LINE 直接貼上給我就可以了。';
-  }catch(e){
-    status.textContent='無法自動複製，請長按欄位內容手動複製後貼到 LINE。';
-  }
-}
-</script>
+<section class="grid">
 
+  <section class="card">
+    <div class="service-kicker">01｜在世毛孩</div>
+    <h2 class="section-title">一般寵物溝通</h2>
+    <p>適合想更了解毛孩情緒、需求、想法，或想知道某些行為背後原因的家長。</p>
+    <ul>
+      <li>毛孩目前的情緒與需求</li>
+      <li>對家人、環境與其他動物的感受</li>
+      <li>某些行為背後的原因</li>
+      <li>牠想對你說的話</li>
+      <li>你想傳達給牠的內容</li>
+    </ul>
+    <div class="price">20 分鐘｜NT$1,680</div><br>
+    <a class="service-link" href="https://yura-pet.github.io/yura-pet-general/" target="_blank" rel="noopener">查看一般寵物溝通詳細說明</a>
+  </section>
+
+  <section class="card">
+    <div class="service-kicker">02｜離世毛孩</div>
+    <h2 class="section-title">離世寵物溝通</h2>
+    <p>給想理解、傳達、告別，或想知道離世毛孩目前狀態的你。</p>
+    <ul>
+      <li>毛孩離世後目前的狀態</li>
+      <li>牠想對你說的話</li>
+      <li>牠對過去家庭與關係的感受</li>
+      <li>是否需要其他協助</li>
+      <li>轉世相關方向與後續服務</li>
+    </ul>
+    <div class="price">30 分鐘｜NT$2,200</div>
+    <div class="note">每一位離世毛孩的狀態都不同，詳細限制與相關說明，請先完整閱讀服務頁面。</div>
+    <a class="service-link" href="https://yura-pet.github.io/-yura-pet-deceased/" target="_blank" rel="noopener">查看離世寵物溝通詳細說明</a>
+  </section>
+
+  <section class="card">
+    <div class="service-kicker">03｜走失／失聯</div>
+    <h2 class="section-title">找寵服務</h2>
+    <p>給正在尋找毛孩、需要更多線索與方向的你。</p>
+    <ul>
+      <li>毛孩目前好不好</li>
+      <li>身體與心理狀態</li>
+      <li>為什麼離開</li>
+      <li>想不想回家</li>
+      <li>當下周圍可能有哪些線索</li>
+    </ul>
+    <p><b>另有：</b>生死／轉世確認、奇門遁甲找寵測算。</p>
+    <div class="price">20 分鐘｜NT$2,680</div>
+    <div class="note">找寵服務提供的是資訊與線索，不保證一定尋回，仍需要搭配主人實際搜尋與行動。</div>
+    <a class="service-link" href="https://yura-pet.github.io/-yura-pet-search/" target="_blank" rel="noopener">查看找寵服務詳細說明</a>
+  </section>
+
+  <section class="card">
+    <h2 class="section-title">不知道自己適合哪一項？</h2>
+    <div class="path">
+      <div class="path-row"><b>毛孩目前在身邊</b><br>→ 一般寵物溝通</div>
+      <div class="path-row"><b>毛孩已經離世</b><br>→ 離世寵物溝通</div>
+      <div class="path-row"><b>毛孩走失、失聯或正在尋找</b><br>→ 找寵服務</div>
+    </div>
+    <div class="note">若情況比較特殊，也可以先回到 LINE 詢問。</div>
+  </section>
+
+  <section class="card">
+    <h2 class="section-title">預約前請先確認</h2>
+    <ul>
+      <li>需由毛孩的 <b>主要照顧者</b> 預約</li>
+      <li>所有服務價格皆以 <b>一隻動物</b> 為單位計算</li>
+      <li>請先閱讀對應的服務說明頁</li>
+      <li>確認預約時段後，需完成 <b>全額付款</b> 才視為預約成功</li>
+      <li>不同服務的規則與注意事項可能不同，請依各服務頁面的說明為準</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2 class="section-title">預約流程</h2>
+    <div class="steps">
+      <div class="step"><div><b>選擇需要的服務</b><br>先從一般溝通、離世溝通或找寵服務中，選擇目前最符合需求的項目。</div></div>
+      <div class="step"><div><b>閱讀服務說明</b><br>完整看過價格、服務內容、限制與注意事項。</div></div>
+      <div class="step"><div><b>回到 LINE</b><br>告訴我想預約的服務，並依照各服務頁面提供需要的資料。</div></div>
+      <div class="step"><div><b>確認時間</b><br>一般預約請提供 2 個可配合時段，我會回覆目前可以安排的時間。</div></div>
+      <div class="step"><div><b>完成付款</b><br>時間確認後完成付款，即正式保留預約時段✨</div></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2 class="section-title">給第一次來到這裡的你</h2>
+    <p>如果你現在很焦慮、很想立刻得到答案，可以先找到最符合目前狀況的服務頁面，把內容完整看完。</p>
+    <p>我希望你在正式預約以前，就能清楚知道這項服務能做什麼、不能做什麼，也知道接下來需要準備什麼。</p>
+    <p>這樣真正開始溝通的時候，我們可以把時間留給最重要的事——<b>好好理解你的毛孩。</b></p>
+  </section>
+
+</section>
+
+<footer class="footer">© Yura Pet Communication</footer>
+</main>
 </body>
 </html>
