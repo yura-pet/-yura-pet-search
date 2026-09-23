@@ -446,6 +446,9 @@ h3, p, li, .item, .note, .qa, .q, .a, .emph, .emph-block, .price, .pill {
   .form-field input,.form-field select,.form-field textarea{font-size:16px}
 }
 
+#qimenFields[hidden],#normalSearchFields[hidden],#normalPhotoHelp[hidden]{display:none !important}
+#qimenFields>.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media(max-width:720px){#qimenFields>.form-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -460,246 +463,19 @@ h3, p, li, .item, .note, .qa, .q, .a, .emph, .emph-block, .price, .pill {
         <div class="title-divider"></div>
         <div class="title-sub">事 前 說 明 書</div>
       </div>
-      <p class="subline">給正在尋找毛孩的你<br>在預約前先閱讀以下內容。</p>
-      <div class="price"><span>20 分鐘</span><b>NT$2,680</b></div>
+      <p class="subline">找寵主服務｜奇門遁甲<br>從生死測算、卦象線索到寵物溝通一起整理。</p><div class="price"><span>奇門遁甲找寵方案</span><b>NT$5,000</b></div>
     </header>
 
     
     <main class="cards">
-
-      <section class="card">
-        <h2>關於找寵服務</h2>
-        <p><span class="emph-block">找寵服務｜NT$2,680（20 分鐘）</span></p>
-        <p>此服務<span class="emph">不保證尋回</span>，僅提供當下接收到的資訊與線索。</p>
-        <div class="note">寵物是會移動的，我能做的是盡量把當下看到、感受到的資訊整理給你，協助你增加搜尋方向與尋獲機率。</div>
-      </section>
-
-      <section class="card">
-        <h2>這個服務能提供什麼</h2>
-        <p>在找寵溝通中，我會盡量感受與整理：</p>
-        <ul>
-          <li>當下周圍附近可能有些什麼</li>
-          <li>毛孩目前的身體狀態</li>
-          <li>毛孩目前的心理狀態</li>
-          <li>為什麼會跑走／離開</li>
-          <li>牠當下可能想表達的內容</li>
-        </ul>
-        <div class="note">這項服務不會以控制毛孩為目的！每隻毛孩個性想法都不同，不要妄想牠會聽話。我還有遇過說謊的，我們能做的就是與牠協調，但結果我不能保證！</div>
-      </section>
-
-      <section class="card">
-        <h2>先講清楚</h2>
-        <p><span class="emph-block">不保證跟牠說「乖乖待在原地」就真的會待在原地。</span></p>
-        <p>我可以協助傳達，但毛孩仍然有自己的行動與選擇，找寵服務不能把溝通內容視為定位器。</p>
-        <p><span class="emph-block">時間一到即結案！！！</span></p>
-        <p>若後續仍需要再次溝通，可另外預約：</p>
-        <div class="note"><span class="emph">後續溝通｜NT$1,680（一次）</span></div>
-        <p><span class="emph">需搭配實際行動與配合，以達最高尋獲機率！</span></p>
-      </section>
-
-      
-      <section class="card">
-        <h2>測算服務</h2>
-
-        <div class="item">
-          <span class="emph">生死／轉世確認｜NT$666</span>
-
-          <h3><span class="emph">這一項處理：</span></h3>
-          <p>① 毛孩走丟很久或送養後不在身邊，不確定還在不在。</p>
-          <p>② 現在養的這一隻，是不是以前那一隻回來了。</p>
-
-          <h3><span class="emph">需要提供：</span></h3>
-          <p>動物的名字、正面清晰照、品種年齡，還有主人的資料。</p>
-          <p>要確認是不是轉世的話，兩隻的名字跟照片都要提供。</p>
-
-          <h3><span class="emph">為什麼要走這一項：</span></h3>
-          <p>我們的能力可以 99.9% 確認一隻動物的生死，但不能從自己的嘴巴講出牠的生與死，那是為了避免跟因果沾染。</p>
-          <p>所以需要透過打聖杯來確認。</p>
-        </div>
-
-        <div class="item">
-          <span class="emph">奇門遁甲測算｜NT$4,000</span>
-
-          <h3><span class="emph">這一項處理什麼：</span></h3>
-          <p>毛孩走失了，這一項給的是找牠的線索！最後尋獲成功的關鍵方位與物件擺設條件等等…<br><br>此方案包含教你怎麼使用這份報告。我知道你們很急、很需要立馬知道牠好不好，這項服務能夠讓你知道牠好不好、想不想回家？為什麼要跑出去？</p>
-
-          <p>這項服務是<span class="emph">「一次占卦 ＋ 20分鐘溝通」</span>的價。</p>
-          <p>奇門遁甲的卦可能顯示毛孩周圍環境、方位與搜尋方向，也顯示得出生死占卦。</p>
-          <p>照著卦象提供的方位與線索進行搜尋，可以增加找到的機率；也可能依實際狀況調整一些家中擺設，增加找回機率。</p>
-
-          <h3><span class="emph">測算需要：</span></h3>
-          <ul>
-            <li>動物的名字</li>
-            <li>正面清晰照</li>
-            <li>走失的日期、時間</li>
-            <li>當時的環境，以及是怎麼走丟的</li>
-            <li>走失地點跟住處的距離</li>
-            <li>目前在哪個城市</li>
-          </ul>
-          <p><span class="emph">細節寫越清楚，卦出來的線索越有用。</span></p>
-        </div>
-
-        <div class="note">
-          🪞 測算將依照道長的安排進行需耐心等候！實際完成時間無法固定，敬請見諒與理解✨
-          <br><br>
-          <span class="emph">這個線索在找到動物以前都可以用，不是過期就沒用的東西。</span>
-        </div>
-
-        <div class="note">
-          🪞 看不懂、需要解釋，可以跟我說呦！
-        </div>
-      </section>
-
-
-      <section class="card">
-        <h2>服務資訊</h2>
-        <div class="item"><span class="emph">找寵服務：</span>20 分鐘｜NT$2,680</div>
-        <div class="item"><span class="emph">後續溝通：</span>NT$1,680（一次）</div>
-        <div class="item"><span class="emph">生死／轉世確認：</span>NT$666</div>
-        <div class="item"><span class="emph">奇門遁甲：</span>NT$4,000（一次占卦＋20分鐘溝通）</div>
-      </section>
-
-      <section class="card">
-        <h2>預約前請準備</h2>
-        <h3><span class="emph">毛孩照片</span></h3>
-        <p>請提供清楚、近期、能辨識毛孩樣貌的照片。</p>
-
-        <h3><span class="emph">毛孩基本資料</span></h3>
-        <p>包含名字、性別、年齡，以及你目前知道的失蹤時間與相關資訊。</p>
-
-        <h3><span class="emph">最後出現的資訊</span></h3>
-        <p>包含最後看到的地點、時間、當時情況，以及目前已經搜尋過的範圍。</p>
-
-        <h3><span class="emph">實際配合搜尋</span></h3>
-        <p>找寵溝通只能提供線索與方向，仍需要家長實際外出尋找、張貼協尋、詢問附近住戶／店家、調閱監視器等方式共同進行。</p>
-      </section>
-
-      <section class="card">
-        <h2>找寵服務的重要觀念</h2>
-        <h3><span class="emph">一、資訊是動態的</span></h3>
-        <p>毛孩會移動，因此溝通當下看到的環境、方向與狀態，都可能隨時間改變。</p>
-
-        <h3><span class="emph">二、不等於精準定位</span></h3>
-        <p>我會盡量描述當下接收到的周圍環境、身心狀態與可能線索，但不能把這些資訊當成 GPS 精準定位。</p>
-
-        <h3><span class="emph">三、需要實際行動</span></h3>
-        <p>溝通與測算只能作為輔助，真正提高尋獲機率仍需要家長配合實際搜尋與現場行動。</p>
-      </section>
-
-      <section class="card">
-        <h2>常見問題</h2>
-
-        <div class="qa">
-          <div class="q">可以保證找到嗎？</div>
-          <div class="a">不保證尋回。服務提供的是當下接收到的資訊、環境線索、身體與心理狀態，以及可能的搜尋方向。</div>
-        </div>
-
-        <div class="qa">
-          <div class="q">可以叫牠待在原地嗎？</div>
-          <div class="a">可以協助傳達，但不保證毛孩一定會照做。牠仍有自己的行動與選擇。</div>
-        </div>
-
-        <div class="qa">
-          <div class="q">找寵溝通完之後還可以再問嗎？</div>
-          <div class="a">時間一到當下回覆完即結案。後續如需再次連結，費用為 NT$1,680／次。</div>
-        </div>
-
-        <div class="qa">
-          <div class="q">什麼情況適合做生死／轉世確認？</div>
-          <div class="a"><span class="emph">生死：</span>適合用在毛孩失聯很久，找寵前最好都做生死占卦，因為每個人對於生死後的行動想法都不一樣。<br><br><span class="emph">轉世確認：</span>適合用在毛孩失聯很久、送養後不在身邊，或想確認現在這一隻是不是以前那一隻回來的情況。</div>
-        </div>
-
-        <div class="qa">
-          <div class="q">奇門遁甲主要是做什麼？</div>
-          <div class="a">主要是提供確切的報告，幫助主人實際去找！<br>包含最後尋獲成功的關鍵方位與物件擺設條件等等…</div>
-        </div>
-
-        <div class="qa">
-          <div class="q">測算多久會完成？</div>
-          <div class="a">需配合道長的安排，實際完成時間無法固定，請耐心等候。</div>
-        </div>
-      </section>
-
-      <section class="card">
-        <h2>預約資訊</h2>
-        <form class="form-grid" id="searchBooking" onsubmit="return false;">
-          <div class="form-field">
-            <label for="s_name">毛孩名稱</label>
-            <input id="s_name" type="text" placeholder="請填毛孩名字">
-          </div>
-
-          <div class="form-field">
-            <label for="s_service">服務類型</label>
-            <select id="s_service">
-              <option value="">請選擇</option>
-              <option>找寵服務</option>
-              <option>生死・轉世確認</option>
-              <option>奇門遁甲測算</option>
-            </select>
-          </div>
-
-          <div class="form-field">
-            <label for="s_method">溝通方式</label>
-            <select id="s_method">
-              <option value="">請選擇</option>
-              <option>照片+語音</option>
-              <option>照片+文字</option>
-            </select>
-          </div>
-
-          <div class="form-field">
-            <label for="s_missing_time">失蹤時間</label>
-            <input id="s_missing_time" type="text" placeholder="請填走失日期與時間">
-          </div>
-
-          <div class="form-field">
-            <label for="s_last_place">最後出現地點</label>
-            <input id="s_last_place" type="text" placeholder="請盡量寫清楚地點">
-          </div>
-
-          <div class="form-field">
-            <label for="s_story">走失經過／當時環境</label>
-            <textarea id="s_story" placeholder="怎麼走丟的、當時環境、目前已做過哪些搜尋，都可以寫清楚"></textarea>
-          </div>
-
-          <div class="form-field">
-            <label for="s_questions">想詢問的內容</label>
-            <textarea id="s_questions" placeholder="可以先把想詢問毛孩的內容整理在這裡"></textarea>
-          </div>
-
-          <div class="form-field">
-            <label for="s_time1">可配合時段 ①</label>
-            <input id="s_time1" type="text" placeholder="例如：8/18 14:00～17:00">
-          </div>
-
-          <div class="form-field">
-            <label for="s_time2">可配合時段 ②</label>
-            <input id="s_time2" type="text" placeholder="例如：8/20 19:00 之後">
-          </div>
-
-          <div class="form-help">毛孩正面清晰照等照片資料，請回到 LINE 後一併傳送。</div>
-
-          <button class="copy-button" type="button"
-            onclick="yuraCopy('searchBooking','searchCopyStatus','【找寵服務｜預約資料】', [['s_name','毛孩名稱'],['s_service','服務類型'],['s_method','溝通方式'],['s_missing_time','失蹤時間'],['s_last_place','最後出現地點'],['s_story','走失經過／當時環境'],['s_questions','想詢問的內容'],['s_time1','可配合時段①'],['s_time2','可配合時段②']])">
-            複製預約資料
-          </button>
-          <div class="copy-status" id="searchCopyStatus" aria-live="polite"></div>
-        </form>
-        <div class="note">看完之後，回到 LINE 跟我說一聲。我會把最近還剩下的時間給你挑，時間確定了，再談匯款。若不確定是否適合預約，歡迎先詢問。</div>
-      </section>
-
-<section class="card">
-        <h2>預約前重要說明</h2>
-        <ol class="important-list">
-          <li>預約時間確認後，需先完成「全額付款」，付款完成後，才視為預約成功✨<br>⚠️ 所有的溝通與測算，皆需完成付款後，才會進行溝通或測算。</li>
-          <li>預約完成後「若當天取消或未出席」一律不提供退款與兌換！</li>
-          <li>必須是主要照顧者，不是的話因為會有隱私問題，一律不接。</li>
-          <li>預約完成後，若發生不可控之原因，導致沒有連結溝通，一律退全額費用！</li>
-          <li>「找寵」服務中配合的（占生死卦象）與（奇門遁甲）等服務，需要配合道長的時間處理，會等比較久。請確認清楚再進行此服務！一但進行此服務了，就不能反悔，不會退款哦！</li>
-          <li>「離世」溝通中有選擇做（超度）或（炁絡筆裁示／動物兵馬打聖杯確認轉世）等服務，需要配合道長的時間處理，會等比較久。請確認清楚再進行此服務！一但進行此服務了，就不能反悔，不會退款哦！</li>
-        </ol>
-      </section>
-    </main>
+<section class="card"><h2>奇門遁甲找寵服務</h2><p><span class="emph-block">主要找寵方案｜NT$5,000</span></p><p>這是目前找寵服務中最主要的方案，會把不同階段需要的資訊一起整理，而不是只單看其中一項。</p><div class="item"><h3><span class="emph">方案包含</span></h3><p>① 生死測算</p><p>② 奇門遁甲找寵報告</p><p>③ 寵物溝通 1 次</p></div><div class="note"><span class="emph">三項需搭配一起進行。</span><br><br>奇門遁甲會提供找寵的方位、環境與搜尋線索；搭配生死測算與一次寵物溝通，協助了解毛孩目前的狀態、想法與周圍附近的情況。</div><h3><span class="emph">奇門遁甲可以協助什麼？</span></h3><p>卦象會整理與搜尋有關的方向與線索，例如可能的方位、周圍環境、關鍵物件或其他可供實際搜尋時參考的資訊。</p><p>方案也包含教你怎麼看、怎麼使用這份報告，讓你拿到資料後知道接下來可以怎麼配合實際搜尋。</p><div class="note">🪞 測算需配合道長的安排進行，實際完成時間無法固定，請耐心等候。<br><br><span class="emph">找寵服務不保證尋回，卦象、測算與溝通皆作為搜尋輔助，仍需搭配實際行動。</span></div></section>
+<section class="card"><h2>寵物溝通｜NT$1,680／次</h2><p>這項服務主要適合以下兩種情況：</p><ul><li><span class="emph">走失未超過 1 天</span>，希望先了解毛孩目前的狀態與周圍附近。</li><li><span class="emph">已經使用奇門遁甲找寵方案</span>，之後想再次確認毛孩的狀態、想法與周圍附近。</li></ul><p>溝通時我會盡量感受與整理毛孩目前的身心狀態、周圍附近、離開原因與想表達的內容。</p><div class="note"><span class="emph">1 次 NT$1,680，溝通報告完成後即結案。</span><br><br>毛孩會持續移動，因此溝通看到的是當下資訊，不能視為 GPS 精準定位。</div></section>
+<section class="card"><h2>生死測算｜NT$666</h2><p><span class="emph-block">統一晚上 9:00 打聖杯</span></p><div class="note"><span class="emph">找寵的第一步，就是先確認生死。</span><br><br>因為每個人在知道生死之後，接下來要做的決定都會不一樣，所以會先從這一步開始。</div><h3><span class="emph">這一項處理什麼？</span></h3><p>主要處理兩種狀況：</p><ol class="important-list"><li>毛孩走丟很久，或送養後已經不在身邊，不確定牠現在還在不在。</li><li>想確認現在養的這一隻，是不是以前那一隻回來了。</li></ol><h3><span class="emph">為什麼要走這一項？</span></h3><p>依照目前的服務方式，我們可以非常明確地確認一隻動物的生死狀態，但不會直接由溝通者自己的嘴巴去宣告牠的生與死，主要是為了避免牽涉因果。</p><p>因此會透過<span class="emph">打聖杯</span>的方式來進行確認。</p><p>奇門遁甲找寵方案 NT$5,000 中已包含這一項，不需要另外加購。</p></section>
+<section class="card"><h2>找寵前先知道</h2><h3><span class="emph">資訊會移動、會變化</span></h3><p>毛孩會移動，因此溝通當下看到的環境、方向與狀態，都可能隨時間改變。</p><h3><span class="emph">不是 GPS 定位</span></h3><p>溝通與奇門遁甲提供的是搜尋方向、環境與狀態等輔助資訊，不能當成精準定位。</p><h3><span class="emph">一定要搭配實際搜尋</span></h3><p>請同步外出尋找、張貼協尋、詢問附近住戶／店家、調閱監視器等。服務提供線索與方向，但不保證尋回。</p></section>
+<section class="card"><h2>預約資訊</h2><p>請先選擇要預約的服務，再完整填寫以下資料。</p><form class="form-grid" id="searchBooking" onsubmit="return false;"><div class="form-field"><label for="s_service">服務類型</label><select id="s_service"><option value="">請選擇</option><option>奇門遁甲找寵方案｜NT$5,000</option><option>寵物溝通｜NT$1,680／次</option><option>生死測算｜NT$666</option></select></div>
+<div class="form-field"><label for="q_animal">1. 動物名字</label><input id="q_animal"></div><div class="form-field"><label for="q_breed_age">2. 品種與年齡</label><input id="q_breed_age"></div><div class="form-field"><label for="q_chip">3. 有沒有晶片</label><select id="q_chip"><option value="">請選擇</option><option>有</option><option>無</option></select></div><div class="form-field"><label for="q_health">4. 健康狀況</label><textarea id="q_health"></textarea></div><div class="form-field"><label for="q_missing">5. 走失的日期時間，到現在多久了</label><textarea id="q_missing"></textarea></div><div class="form-field"><label for="q_location">6. 走失地點</label><input id="q_location"></div><div class="form-field"><label for="q_how">7. 怎麼走丟的</label><textarea id="q_how"></textarea></div><div class="form-field"><label for="q_last_seen">8. 最後一次確定看到牠</label><textarea id="q_last_seen"></textarea></div><div class="form-field"><label for="q_searched">9. 已經做過哪些搜尋</label><textarea id="q_searched"></textarea></div><div class="form-field"><label for="q_owner">10. 主人姓名</label><input id="q_owner"></div><div class="form-field"><label for="q_birth">11. 主人出生年月日、時間</label><input id="q_birth"></div><div class="form-field"><label for="q_gender">12. 主人性別</label><input id="q_gender"></div><div class="form-field"><label for="q_city">13. 主人目前在哪個城市</label><input id="q_city"></div><div class="form-field"><label for="q_contact">14. 唯一聯絡人</label><input id="q_contact"></div><div class="form-help"><span class="emph">另外請附照片：</span><br>毛孩的近期照片（最好兩張：正面一張、全身一張）、主人的自拍照。</div><button class="copy-button" type="button" onclick="copySearchBooking()">複製預約資料</button><div class="copy-status" id="searchCopyStatus"></div></form><div class="note">填寫完成後複製資料，回到 LINE 貼上並附上照片即可。</div></section>
+<section class="card"><h2>預約前重要說明</h2><ol class="important-list"><li>所有溝通與測算皆需完成全額付款後，才會開始進行。</li><li>必須由主要照顧者預約，避免涉及毛孩與飼主的隱私問題。</li><li>找寵服務提供的是輔助資訊與搜尋方向，不保證尋回。</li><li>生死測算統一於晚上 9:00 打聖杯；奇門遁甲則需配合道長時間處理，完成時間無法固定。</li><li>服務開始進行後，因已投入溝通或測算作業，不接受中途取消。</li></ol></section>
+</main>
 
 
       
@@ -708,33 +484,8 @@ h3, p, li, .item, .note, .qa, .q, .a, .emph, .emph-block, .price, .pill {
   </div>
 
 <script>
-function yuraCollect(formId, title, fields){
-  const form = document.getElementById(formId);
-  const lines = [title, ''];
-  fields.forEach(([id,label]) => {
-    const el = form.querySelector('#'+id);
-    const value = (el && el.value ? el.value.trim() : '') || '（未填）';
-    lines.push(label + '：' + value);
-  });
-  return lines.join('\n');
-}
-async function yuraCopy(formId, statusId, title, fields){
-  const text = yuraCollect(formId, title, fields);
-  const status = document.getElementById(statusId);
-  try{
-    if(navigator.clipboard && window.isSecureContext){
-      await navigator.clipboard.writeText(text);
-    }else{
-      const ta=document.createElement('textarea');
-      ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
-      document.body.appendChild(ta); ta.focus(); ta.select();
-      document.execCommand('copy'); document.body.removeChild(ta);
-    }
-    status.textContent='已複製完成 ✨ 回到 LINE 直接貼上給我就可以了。';
-  }catch(e){
-    status.textContent='無法自動複製，請長按欄位內容手動複製後貼到 LINE。';
-  }
-}
+const bookingFields=[['s_service','服務類型'],['q_animal','動物名字'],['q_breed_age','品種與年齡'],['q_chip','有沒有晶片'],['q_health','健康狀況'],['q_missing','走失的日期時間，到現在多久了'],['q_location','走失地點'],['q_how','怎麼走丟的'],['q_last_seen','最後一次確定看到牠'],['q_searched','已經做過哪些搜尋'],['q_owner','主人姓名'],['q_birth','主人出生年月日、時間'],['q_gender','主人性別'],['q_city','主人目前在哪個城市'],['q_contact','唯一聯絡人']];
+async function copySearchBooking(){const lines=['【Yura 找寵服務｜預約資料】',''];bookingFields.forEach(([id,label])=>{const el=document.getElementById(id);lines.push(label+'：'+((el&&el.value?el.value.trim():'')||'（未填）'));});lines.push('','另外請附照片：毛孩的近期照片（最好兩張：正面一張、全身一張）、主人的自拍照');const text=lines.join('\n');const status=document.getElementById('searchCopyStatus');try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text)}else{const ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.focus();ta.select();document.execCommand('copy');ta.remove()}status.textContent='已複製完成 ✨ 回到 LINE 直接貼上並附上照片就可以了。'}catch(e){status.textContent='無法自動複製，請手動複製資料後貼到 LINE。'}}
 </script>
 
 </body>
